@@ -1,0 +1,33 @@
+{
+  "name": "qrcodescanner",
+  "version": "1.0.0",
+  "description": "A simple qr code scanner.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "watch-sass": "sass -w ./public/scss/styles.scss ./public/css/styles.css",
+    "watch-server": "nodemon index.js",
+    "dev": "concurrently --kill-others \"npm run watch-sass\" \"npm run watch-server\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clebertmarctyson/QrCodeScanner.git"
+  },
+  "keywords": [],
+  "author": "clebertmarctyson <marctysonclebert9@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clebertmarctyson/QrCodeScanner/issues"
+  },
+  "homepage": "https://github.com/clebertmarctyson/QrCodeScanner#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "concurrently": "^7.4.0",
+    "nodemon": "^2.0.20",
+    "qrcode": "^1.5.1",
+    "sass": "^1.54.9"
+  }
+}

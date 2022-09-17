@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            <%= title %>
+        </h1>
+        <div class="form-container">
+            <form action="/" method="post">
+                <input type="url" name="url" placeholder="Paste the url here">
+                <button>Generate</button>
+            </form>
+        </div>
+
+        <% if (locals.src) { %>
+            <div class="qrcode_container">
+                <div class="qrcode_image_container">
+                    <img class="qrcode_image" src="<%- src  %> " alt="">
+                    <button onclick="downloadQrcode('Hello World');">Download QR Code</button>
+                </div>
+            </div>
+            <% } %>
+    </div>
+
+    <script>
+        const downloadQrcode = () => {
+            const { src } = document.querySelector(".qrcode_image");
+            const link = document.createElement("a");
+            link.href = src;
+            link.download = "qrcode";
+            link.click();
+        }
+    </script>
+</body>
+
+</html>
