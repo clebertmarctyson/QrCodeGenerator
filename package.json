@@ -4,10 +4,12 @@
   "description": "A simple qr code generator",
   "main": "index.js",
   "scripts": {
-    "start": "sass -w ./public/scss/styles.scss ./public/css/styles.css && node index.js",
-    "watch-sass": "sass -w ./public/scss/styles.scss ./public/css/styles.css",
-    "watch-server": "nodemon index.js",
-    "dev": "concurrently --kill-others \"npm run watch-sass\" \"npm run watch-server\""
+    "prod": "node index.js",
+    "prod-sass": "sass ./public/scss/styles.scss ./public/css/styles.css",
+    "start": "npm run prod-sass & npm run prod",
+    "dev": "nodemon index.js",
+    "dev-sass": "sass -w ./public/scss/styles.scss ./public/css/styles.css",
+    "devStart": "concurrently --kill-others \"npm run dev-sass\" \"npm run dev-server\""
   },
   "repository": {
     "type": "git",
