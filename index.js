@@ -1,6 +1,7 @@
 const express = require("express");
 const qrcode = require("qrcode");
 const app = express();
+const port = process.env.PORT;
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static("/public"));
@@ -19,7 +20,5 @@ app.post("/", (req, res) => {
     res.render("index", { title: "QR Code Scanner", src });
   });
 });
-
-const port = process.env.PORT;
 
 app.listen(port);
