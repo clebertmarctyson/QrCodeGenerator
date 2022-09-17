@@ -1,33 +1,37 @@
 {
-  "name": "qrcodescanner",
+  "name": "qrcodegenerator",
   "version": "1.0.0",
-  "description": "A simple qr code scanner.",
+  "description": "A simple qr code generator",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "sass -w ./public/scss/styles.scss ./public/css/styles.css && node index.js",
     "watch-sass": "sass -w ./public/scss/styles.scss ./public/css/styles.css",
     "watch-server": "nodemon index.js",
     "dev": "concurrently --kill-others \"npm run watch-sass\" \"npm run watch-server\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/clebertmarctyson/QrCodeScanner.git"
+    "url": "git+https://github.com/clebertmarctyson/QrCodeGenerator.git"
   },
-  "keywords": [],
-  "author": "clebertmarctyson <marctysonclebert9@gmail.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/clebertmarctyson/QrCodeScanner/issues"
-  },
-  "homepage": "https://github.com/clebertmarctyson/QrCodeScanner#readme",
   "dependencies": {
     "ejs": "^3.1.8",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "sass": "^1.54.9"
   },
   "devDependencies": {
     "concurrently": "^7.4.0",
     "nodemon": "^2.0.20",
-    "qrcode": "^1.5.1",
-    "sass": "^1.54.9"
-  }
+    "qrcode": "^1.5.1"
+  },
+  "keywords": [
+    "QR CODE",
+    "QRCODE",
+    "QRCODE GENERATOR"
+  ],
+  "author": "clebertmarctyson <marctysonclebert9@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clebertmarctyson/QrCodeGenerator/issues"
+  },
+  "homepage": "https://github.com/clebertmarctyson/QrCodeGenerator#readme"
 }

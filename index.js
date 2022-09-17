@@ -1,7 +1,7 @@
 const express = require("express");
 const qrcode = require("qrcode");
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 3001;
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static("/public"));
