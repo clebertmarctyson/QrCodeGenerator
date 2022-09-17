@@ -1,6 +1,5 @@
 const express = require("express");
 const qrcode = require("qrcode");
-
 const app = express();
 
 app.use(express.urlencoded({ extended: false }));
