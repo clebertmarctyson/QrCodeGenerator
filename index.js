@@ -1,11 +1,12 @@
 const express = require("express");
 const qrcode = require("qrcode");
 const app = express();
+const path = require("path");
+
 const port = process.env.PORT;
 
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static("/public"));
-app.use("/css", express.static(__dirname + "/public/css/"));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.set("view engine", "ejs");
 
