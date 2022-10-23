@@ -11,14 +11,14 @@ app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-  res.render("index", { title: "QR Code Scanner" });
+  res.render("index", { title: "QR Code Generator" });
 });
 
 app.post("/", (req, res) => {
   const { url } = req.body;
 
   qrcode.toDataURL(url, (err, src) => {
-    res.render("index", { title: "QR Code Scanner", src });
+    res.render("index", { title: "QR Code Generator", src });
   });
 });
 
