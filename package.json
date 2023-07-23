@@ -1,7 +1,7 @@
 {
   "name": "qrcodegenerator",
   "version": "1.0.0",
-  "description": "A simple qr code generator",
+  "description": "A simple QR code generator application that allows users to easily create QR codes for any URL. With this application, you can quickly generate QR codes for websites, links, and other online content. Just paste the URL, click the \"Generate\" button, and get your QR code instantly.",
   "main": "index.js",
   "scripts": {
     "start-script": "node index.js",
